@@ -1,0 +1,15 @@
+{
+  "name": "Shakuro",
+  "scripts": {
+    "test": "jest"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}
