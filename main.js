@@ -7,8 +7,20 @@ function func(str, subStrA, subStrB) {
   let aIndex = -1;
   let bIndex = -1;
 
+  /*
   while (aIndex === -1 && bIndex === -1 && i > 0) {
     if (str.substring(i, i + 1) == subStrA) {
+      aIndex = i;
+    }
+    if (str.substring(i, i + 1) == subStrB) {
+      bIndex = i;
+    }
+    i = i - 1;
+  }
+  */
+
+  while (aIndex === -1 && bIndex === -1 && i > 0) {
+    if (str[i] === subStrA) {
       aIndex = i;
     }
     if (str.substring(i, i + 1) == subStrB) {
