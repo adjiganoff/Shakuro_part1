@@ -1,45 +1,35 @@
-function func(str, subStrA, subStrB) {
-  if (str === '') {
+function func(searchStr, subStrA, subStrB) {
+  if (searchStr === '') {
     return -1;
   }
 
-  let i = str.length - 1;
+  let i = searchStr.length - 1;
   let aIndex = -1;
   let bIndex = -1;
 
-  /*
   while (aIndex === -1 && bIndex === -1 && i > 0) {
-    if (str.substring(i, i + 1) == subStrA) {
+    if (searchStr[i] === subStrA) {
       aIndex = i;
     }
-    if (str.substring(i, i + 1) == subStrB) {
-      bIndex = i;
-    }
-    i = i - 1;
-  }
-  */
-
-  while (aIndex === -1 && bIndex === -1 && i > 0) {
-    if (str[i] === subStrA) {
-      aIndex = i;
-    }
-    if (str.substring(i, i + 1) == subStrB) {
+    if (searchStr[i] === subStrB) {
       bIndex = i;
     }
     i = i - 1;
   }
 
-  if (aIndex !== -1 && bIndex === -1) {
-    return aIndex;
-  } else {
+  if (aIndex === -1 && bIndex === -1) {
+    return -1;
+  }
+
+  if (aIndex !== -1 && bIndex !== -1) {
     return Math.max(aIndex, bIndex);
   }
 
-  if (bIndex !== -1) {
-    return bIndex;
+  if (aIndex !== -1) {
+    return aIndex;
   }
 
-  return -1;
+  return bIndex;
 }
 
 module.exports = func;
