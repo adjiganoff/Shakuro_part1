@@ -32,4 +32,10 @@ function func(searchStr, subStrA, subStrB) {
   return bIndex;
 }
 
+/*
+* find 1st index match from string end
+* if it equals -1 return 2nd index match
+* else return 1st match index
+*/
+
 module.exports = func;
