@@ -1,4 +1,4 @@
-function func(searchStr, subStrA, subStrB) {
+function multiMatch(searchStr, subStrA, subStrB) {
   if (searchStr === '') {
     return -1;
   }
@@ -17,10 +17,6 @@ function func(searchStr, subStrA, subStrB) {
     i = i - 1;
   }
 
-  if (aIndex === -1 && bIndex === -1) {
-    return -1;
-  }
-
   if (aIndex !== -1 && bIndex !== -1) {
     return Math.max(aIndex, bIndex);
   }
@@ -32,10 +28,4 @@ function func(searchStr, subStrA, subStrB) {
   return bIndex;
 }
 
-/*
-* find 1st index match from string end
-* if it equals -1 return 2nd index match
-* else return 1st match index
-*/
-
-module.exports = func;
+module.exports = multiMatch;
